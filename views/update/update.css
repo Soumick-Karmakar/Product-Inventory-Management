@@ -1,0 +1,110 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #142952;
+    color: #e6ac00;
+    font-variant: small-caps;
+}
+
+.name {
+    padding-left: 20px;
+    font-size: 40px;
+    float: left;
+}
+
+.home {
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    background-color: #142952;
+    color: aliceblue;
+}
+
+.home:hover {
+    background-color: #005cb3;
+}
+
+.home h4 {
+    float:left;
+}
+
+.header {
+    background-color: antiquewhite;
+    color:#142952;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.edit {
+    justify-content: center;
+    padding-left: 300px;
+
+}
+
+.edit input {
+    color: #142952;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    height: 40px;
+    width: 700px;
+    margin-top: 5px;
+    background: linear-gradient(to right, #6096BA, #A3CEF1, #E7ECEF, #A3CEF1, #6096BA); 
+}
+
+.edit button {
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    height: 40px;
+    width: 700px;
+    margin-top: 5px;
+    background-color: #142952;
+    color: aliceblue;
+}
+
+.edit button h4 {
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.edit img {
+    width: 20px;
+    height: 20px;
+    color: #142952;
+    padding-left: 10px;
+    margin-top: 7px;
+}
+
+.result_table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.result_table_header {
+    background-color: #274C77;
+    font-weight: bold;
+}
+
+.result_table_header th{
+    border: 1px solid #000; /* Add borders to table header cells */
+    padding: 8px;
+    text-align: center;
+    color: #E7ECEF;
+}
+
+.result_table_data td{
+    border: 1px solid #000; /* Add borders to table data cells */
+    padding: 8px;
+    text-align: center;
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+}

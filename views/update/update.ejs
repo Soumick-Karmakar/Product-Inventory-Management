@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel='stylesheet' href="update.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1 class="name">Antiglare</h1>
+
+        <!-- Home button to naviagte to the data page-->
+        <form action="/submit" method="POST">
+            <input name="username" type="hidden" value="<%= user %>">
+            <button class="home" id="home">
+                <h4>Home</h4>
+            </button>
+        </form>
+    </div>
+    <div class="header">
+        <h2>Please enter your Product ID to Edit</h2>
+    </div>
+    <form action="/search_product_to_update" method="post">
+        <div class="edit">
+            <input name="id" type="text" placeholder="ID" required="true">
+            <button type="submit">
+                <h4>SEARCH</h4>
+                <img src="search.png" alt="Search">
+            </button>
+        </div>
+    </form>
+    </form>
+    <% if (typeof data !=='undefined' && data !==null) { %>
+        <% if ( data !=='String' && data.length> 0 ) { %>
+            <form action="/save" method="post">
+                <table class="result_table">
+                    <thead class="result_table_header">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>IP Rating</th>
+                            <th>Watts</th>
+                            <th>Beam Angle</th>
+                            <th>Dimension</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="result_table_data">
+                        <% data.forEach(function(item) { %>
+                            <tr>
+                                <td contenteditable="true">
+                                    <%= item.id %>
+                                </td>
+                                <td contenteditable="true">
+                                    <%= item.name %>
+                                </td>
+                                <td contenteditable="true">
+                                    <%= item.ip_rating %>
+                                </td>
+                                <td contenteditable="true">
+                                    <%= item.watts %>
+                                </td>
+                                <td contenteditable="true">
+                                    <%= item.beam_angle %>
+                                </td>
+                                <td contenteditable="true">
+                                    <%= item.dimension %>
+                                </td>
+                                <td contenteditable="true">
+                                    <%= item.price %>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+                <div class="edit">
+                    <button type="submit">
+                        <h4>SAVE</h4>
+                    </button>
+                </div>
+            </form>
+        <% } else { %>
+            <h4 class="message">Oops! No item match the curent selection.</h4>
+        <% } %>
+    <% } %>
+</body>
+
+</html>

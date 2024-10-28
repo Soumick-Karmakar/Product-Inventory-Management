@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel='stylesheet' href="search.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1 class="name">Antiglare</h1>
+
+        <!-- Home button to naviagte to the data page-->
+        <form action="/submit" method="POST">
+            <input name="username" type="hidden" value="<%= user %>">
+            <button class="home" id="home">
+                <h4>Home</h4>
+            </button>
+        </form>
+    </div>
+    <div class="header">
+        <h2>Please enter your search criteria</h2>
+    </div>
+    <!--Search criterias form-->
+    <form action="/search_product" method="post">
+        <div class="criterias">
+            <input name="id" type="text" placeholder="ID" required="true" >
+            <button type="submit">
+                <h4>SEARCH</h4>
+                <img src="search.png" alt="Search">
+            </button>
+        </div>
+    </form >
+    <% if (typeof data !== 'undefined' && data !== null) { %>
+        <% if ( data !=='String' && data.length > 0 ) { %>
+            <table class="result_table">
+                <thead class="result_table_header">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>IP Rating</th>
+                        <th>Watts</th>
+                        <th>Beam Angle</th>
+                        <th>Dimension</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody class="result_table_data">
+                    <% data.forEach(function(item) { %>
+                        <tr>
+                            <td><%= item.id %></td>
+                            <td><%= item.name %></td>
+                            <td><%= item.ip_rating %></td>
+                            <td><%= item.watts %></td>
+                            <td><%= item.beam_angle %></td>
+                            <td><%= item.dimension %></td>
+                            <td><%= item.price %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <h4 class="message">Oops! No item match the curent selection.</h4>
+        <% } %>
+    <% } %>
+</body>
+
+</html>

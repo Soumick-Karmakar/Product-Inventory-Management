@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My List</title>
+    <link rel="stylesheet" href="/data.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Welcome <%= name %>!</h1>
+        <h3>Today is your day. Go ahead and build your awesome list!!!</h3>
+    </div>
+    <form id="submit" method="post" >
+        <button class="selection" id="add" type="button" onclick="adding()">
+            <h3>Add my products</h3>
+        </button>
+        <button class="selection" id="search" type="button" onclick="searching()">
+            <h3>Search my products</h3>
+        </button>
+        <button class="selection" id="update" type="button" onclick="updating()">
+            <h3>Edit my products</h3>
+        </button>
+        <button class="selection" id="delet" type="button" onclick="deleting()">
+            <h3>Delete my products</h3>
+        </button>
+    </form>
+    <script>
+        function adding() {
+            var add = document.getElementById('submit')
+            add.action = "/add"
+            add.submit()
+        }
+
+        function searching() {
+            var search = document.getElementById('submit')
+            search.action = "/search"
+            search.submit()
+        }
+
+        function updating() {
+            var update = document.getElementById('submit')
+            update.action = "/update"
+            update.submit()
+        }
+
+        function deleting() {
+            var delet = document.getElementById('submit')
+            delet.action = "/delete"
+            delet.submit()
+        }
+    </script>
+</body>
+</html>

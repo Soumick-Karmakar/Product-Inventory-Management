@@ -1,0 +1,54 @@
+.heading{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.login_tab {
+    text-align: center;  
+
+}
+
+.login_tab input{
+    border-radius: 8px;
+    padding: 10px 70px;
+    text-align: center;
+    background-color: hsl(82, 86%, 92%);
+    color: rgb(7, 20, 46)
+}
+
+.submit {
+    padding-top: 8px; 
+    text-align: center;
+}
+
+.submit button{
+    border-radius: 8px;
+    padding: 10px 118px;
+    text-align: center;
+    background-color: hsl(82, 86%, 92%);
+    color: rgb(7, 20, 46)
+}
+
+.submit button:hover{
+    background-color: rgb(213, 243, 184);
+    color: rgb(27, 16, 87)
+}
+
+body 
+{
+  font-family:Arial; 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
+}
+
+form{
+    width: 25rem;
+    margin: auto;
+    margin-top: 150px;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 15, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+

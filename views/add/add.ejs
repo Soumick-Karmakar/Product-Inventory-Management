@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link rel="stylesheet" href="./add.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Add Your New Product</h1>
+    </div>
+    <form action="/add_product" method="post"> 
+        <div class="newElement">
+            <br>
+            <input id="id" name="id" type="text" placeholder="Product ID" required="true">
+            <input id="name" name="name" type="text" placeholder="Product Name" required="true">
+            <br>
+            <input id="image" name="image" type="file" name="image" accept="image/*" required="true">
+            <br>
+            <input id="ip_rating" name="ip_rating" type="text" placeholder="IP Rating">
+            <input id="watts" name="watts" type="number" placeholder="Wattage" required="true">
+            <input id="beam_angle" name="beam_angle" type="number" placeholder="Beam Angle">
+            <input id="CCT1" name="CCT1" type="number" placeholder="CCT - 1" required="true">
+            <input id="CCT2" name="CCT2" type="number" placeholder="CCT - 2">
+            <input id="CCT3" name="CCT3" type="number" placeholder="CCT - 3">
+            <input id="dimension" name="dimension" type="text" placeholder="Dimension">
+            <br>
+            <textarea id="description" name="description" type="text" placeholder="Product description here..." rows="5" cols="84"></textarea>
+            <br>
+            <input id="price" name="price" type="number" placeholder="Price" required="true">
+            <button id="submit" type="submit" >Add my product</button>
+            <br>
+            <br>
+        </div>
+    </form>
+    <div>
+        mongo output here...
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+body 
+{
+  font-family:Arial; 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
+}
+
+.heading{
+  width: 83rem;
+  margin: auto;
+  margin-top: 10px;
+  padding-left: 15px;
+  color:whitesmoke;
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(11, 15, 15, 0.582);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.selection{
+  width: 41rem;
+  margin: auto;
+  margin-top: 10px;
+  padding-left: 15px;
+  color:whitesmoke;
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(11, 15, 15, 0.582);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.selection:hover{
+  background-color: rgb(213, 243, 184);
+  color: rgb(0, 0, 0);
+}
+
+.selection.clicked-state{
+  background-color: rgb(213, 243, 184);
+  color: rgb(0, 0, 0);
+  font-size: larger;
+}
+
+
